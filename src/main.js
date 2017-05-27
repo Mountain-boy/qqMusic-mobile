@@ -9,7 +9,11 @@ import axios from 'axios';
 import vueAxios from 'vue-axios'
 Vue.use(vueAxios,axios)
 
+import '@/assets/swiper-3.4.2.min.css'
+import '../static/js/swiper-3.4.2.min.js'
+
 Vue.config.productionTip = false
+
 
 import '@/assets/index.css'
 import tools from '@/assets/js/tools'

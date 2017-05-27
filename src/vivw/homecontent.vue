@@ -1,6 +1,6 @@
 <template>
   <div class="content_wrapper">
-      <div class="banner">
+      <!-- <div class="banner">
         <nav class="navs">
           <span  v-for='item,index in childMsg.slider'></span>
         </nav>
@@ -13,6 +13,17 @@
             </a>
           </li>
         </ul>
+      </div> -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" v-for="item,index in childMsg.slider">
+              <a :href='item.linkUrl' >
+                <img :src='item.picUrl'/>
+              </a>
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
       </div>
       <div class="mod_twocol_list">
         <h2 class="list_title">电台</h2>
@@ -55,6 +66,23 @@
 export default {
   name: 'homecontent',
   props: ['childMsg'],
+  watch: {
+    childMsg(){
+      this.$nextTick(() => {
+         var mySwiper = new Swiper('.swiper-container', {
+           direction: 'horizontal',
+           loop: true,
+           pagination: '.swiper-pagination',
+           effect : 'coverflow',
+           autoplay : 3000,
+           paginationClickable :true,
+         })
+       })
+    }
+  },
+  mounted(){
+
+  },
   data () {
     return {
 
@@ -62,3 +90,8 @@ export default {
   }
 }
 </script>
+<style>
+  #app .swiper-pagination-bullet-active{
+    background:rgba(255,255,255,.8);
+  }
+</style>

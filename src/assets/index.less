@@ -78,7 +78,6 @@ body{
     overflow: hidden;
     text-align: center;
     color: #8f8f8f;
-    display: none;
     img {
         display: block;
         width: 100px;
@@ -107,44 +106,17 @@ body{
         margin: 0 10px;
     }
 }
+#wrapper{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
 
-.banner{
-    overflow:hidden;
+}
+.swiper-slide img {
+    width:540/@rem;
     height:216/@rem;
-    position:relative;
-    margin-bottom: 14px;
-    .navs{
-        position:absolute;
-        bottom:10px;
-        height:18/@rem;
-        width:540/@rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-        span{
-            width:8/@rem;
-            height:8/@rem;
-            border-radius:50%;
-            margin:0 5px;
-            background-color:rgba(144,144,144,.8);;
-        }
-        .ui-state-active{
-            background-color:rgba(255,255,255,1);
-        }
-    }
-    .list{
-        position:absolute;
-        width:500%;
-        .item{
-            float:left;
-            margin:0;
-            img{
-                width:540/@rem;
-                height:216/@rem;
-            }
-        }
-    }
 }
 .mod_twocol_list{
     margin:0 10px;
@@ -342,6 +314,17 @@ body{
         display: -webkit-box;
         -webkit-box-align: center;
         -webkit-box-pack: center;
+        .topic_arrow {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -4px;
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid #b2b2b2;
+            border-bottom: 1px solid #b2b2b2;
+            -webkit-transform: rotate(-45deg);
+        }
     }
     .topic_cont {
         -webkit-box-flex: 1;
@@ -380,9 +363,7 @@ body{
         height: 20px;
         padding: 8px 12px 8px 35px;
         -webkit-box-flex: 1;
-        form{
-            width: 347px;
-            height: 20px;
+            form{
             font-size:12px;
         }
     }
@@ -393,7 +374,6 @@ body{
         color: rgba(0,0,0,.3);
         border: none;
         -webkit-appearance: none;
-        -webkit-appearance: textfield;
         font-size: 14px;
         outline: none;
     }
@@ -409,7 +389,6 @@ body{
         text-indent: -999px;
     }
     .icon_delete {
-        display: none;
         position: absolute;
         top: 9px;
         right: 12px;
@@ -419,8 +398,29 @@ body{
         text-indent: -9999px;
         border-radius: 99px;
     }
+    .icon_delete:before,.icon_delete:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 8px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+    }
+    .icon_delete:before {
+        width: 10px;
+        height: 2px;
+        margin-left: -5px;
+        margin-top: -1px;
+    }
+    .icon_delete:after {
+        width: 2px;
+        height: 10px;
+        margin-left: -1px;
+        margin-top: -5px;
+    }
     .search_bar_tip_text {
-        display: none;
         padding-right: 10px;
         padding-left: 10px;
         font-size: 14px;
