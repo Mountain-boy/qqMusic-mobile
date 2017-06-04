@@ -30,9 +30,11 @@ export default {
   mounted(){
     let scroll = null;
     this.show = true;
-    this.$http.get('/api/toplist').then((d)=>{
-        this.list = JSON.parse(d.data.slice(18,d.data.length-1)).data.topList
+    this.$http.get('/api/toplist'+'?format=json').then((d)=>{
+        this.list = d.data.data.topList
         this.show = false;
+        console.log(d)
+
         this.$nextTick(()=>{
           scroll.refresh()
         })

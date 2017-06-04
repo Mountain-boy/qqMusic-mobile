@@ -1,19 +1,5 @@
 <template>
   <div class="content_wrapper">
-      <!-- <div class="banner">
-        <nav class="navs">
-          <span  v-for='item,index in childMsg.slider'></span>
-        </nav>
-        <ul class="list">
-          <li class="item"
-            v-for='item,index in childMsg.slider'
-          >
-            <a :href='item.linkUrl' >
-              <img :src='item.picUrl' alt="">
-            </a>
-          </li>
-        </ul>
-      </div> -->
       <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="item,index in childMsg.slider">

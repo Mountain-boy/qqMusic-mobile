@@ -14,6 +14,10 @@ ul,
 li {
   list-style: none;
 }
+html,
+body {
+  height: 100%;
+}
 body {
   background: #f4f4f4;
 }
@@ -107,6 +111,7 @@ body {
 .mod_prompt p {
   margin: 0 10px;
 }
+#infopage,
 #wrapper {
   position: fixed;
   top: 0;
@@ -460,4 +465,223 @@ body {
 }
 .mod_search_record {
   background: #fff;
+}
+.mod_search_content li {
+  position: relative;
+  height: 55px;
+  padding-left: 56px;
+  overflow: hidden;
+  text-align: left;
+}
+.mod_search_content li .icon {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 22px;
+  height: 20px;
+  background-position: 0 0;
+  background-image: url(img/search_sprite.png);
+  background-repeat: no-repeat;
+  background-size: 22px 30px;
+}
+.mod_search_content li .media {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 40px;
+  height: 40px;
+}
+.mod_search_content li .media img {
+  display: block;
+  width: 100%;
+}
+.mod_search_content li .main_tit {
+  margin: 10px 0 2px;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #000;
+}
+.mod_search_content li .sub_tit {
+  color: #808080;
+  font-size: 16px;
+}
+#infopage {
+  margin-bottom: 100px;
+}
+#infopage .c_ico1 {
+  color: #fff;
+}
+#infopage .mod_focus {
+  position: relative;
+  overflow: hidden;
+}
+#infopage .focus__body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+#infopage .focus__info {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  margin: 0 15px 25px;
+}
+#infopage .focus__text {
+  -webkit-box-flex: 1;
+}
+#infopage .c_txt1 {
+  color: #fff;
+}
+#infopage .focus__tit {
+  position: relative;
+  height: 36px;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: 400;
+}
+#infopage .focus__desc,
+#infopage .focus__tit {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  text-align: left;
+}
+#infopage .focus__play {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  margin-left: 10px;
+  border: solid 3px;
+  border-radius: 999px;
+}
+#infopage .focus__play .focus__play_text {
+  opacity: 0;
+}
+#infopage .focus__play::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 17px;
+  height: 0;
+  width: 0;
+  line-height: 999em;
+  overflow: hidden;
+  border-color: transparent transparent transparent currentColor;
+  border-width: 9px 15px;
+  border-style: solid;
+}
+#infopage .focus__bg {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+#infopage .focus__bg::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+#infopage .c_gradient {
+  color: #000;
+}
+#infopage .focus__gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-image: -webkit-linear-gradient(top, transparent, currentColor 80%);
+}
+#infopage .focus__gradient::after {
+  content: "";
+  display: block;
+  padding-top: 60%;
+}
+#infopage .c_bor1,
+#infopage .c_bor1::after {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+#infopage .border_b,
+#infopage .border_l,
+#infopage .border_r,
+#infopage .border_t {
+  position: relative;
+}
+#infopage .song_list__box {
+  display: -webkit-box;
+  height: 60px;
+  padding-left: 10px;
+}
+#infopage .song_list__no {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  width: 30px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+#infopage .c_txt2 {
+  color: rgba(255, 255, 255, 0.6);
+}
+#infopage .rank_trend {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  height: 18px;
+  margin-top: -5px;
+}
+#infopage .rank_trend__icon {
+  display: block;
+  width: 7px;
+  line-height: 999px;
+  overflow: hidden;
+}
+#infopage .rank_trend__number {
+  display: block;
+  font-size: 12px;
+  -webkit-transform: scale(0.7);
+}
+#infopage .song_list__body {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+  padding-right: 15px;
+  text-align: left;
+}
+#infopage .song_list__tit {
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 400;
+}
+#infopage .song_list__desc {
+  /*display: -webkit-box;
+       -webkit-box-align: center;*/
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#infopage .mod_prompt {
+  padding-top: 40px;
+  text-align: center;
+}
+#infopage .mod_prompt__img {
+  display: block;
+  margin: 0 auto 20px;
+}
+#infopage .mod_prompt__tit {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 400;
+}
+#infopage .mod_complete {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  height: 55px;
+  font-size: 14px;
 }

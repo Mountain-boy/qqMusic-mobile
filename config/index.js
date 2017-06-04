@@ -48,6 +48,20 @@ module.exports = {
         pathRewrite: {
           '^/api/seach': ''
         }
+      },
+      "/api/gotoINfo": {
+        target: 'https://c.y.qq.com/v8/fcg-bin/fcg_v8_toplist_cp.fcg',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api/gotoINfo': ''
+        }
+      },
+      "/api/searchMusic": {
+        target: 'https://c.y.qq.com/soso/fcgi-bin/search_for_qq_cp?format=json&w=',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api/searchMusic': ''
+        }
       }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"

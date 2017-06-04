@@ -13,6 +13,9 @@ ol, ul ,li{
 list-style: none;
 }
 @rem:54rem;
+html,body{
+    height:100%;
+}
 body{
     background: #f4f4f4
 }
@@ -106,7 +109,7 @@ body{
         margin: 0 10px;
     }
 }
-#wrapper{
+#infopage,#wrapper{
     position:fixed;
     top:0;
     left:0;
@@ -461,4 +464,218 @@ body{
 }
 .mod_search_record {
     background: #fff;
+}
+.mod_search_content li {
+        position: relative;
+        height: 55px;
+        padding-left: 56px;
+        overflow: hidden;
+        text-align:left;
+        .icon {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            width: 22px;
+            height: 20px;
+            background-position: 0 0;
+            background-image: url(img/search_sprite.png);
+            background-repeat: no-repeat;
+            background-size: 22px 30px;
+        }
+        .media {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            width: 40px;
+            height: 40px;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+        .main_tit {
+            margin: 10px 0 2px;
+            line-height: 18px;
+            font-size: 16px;
+            font-weight: normal;
+            color: #000;
+        }
+        .sub_tit {
+            color: #808080;
+            font-size:16px;
+        }
+    }
+#infopage{
+    margin-bottom: 100px;
+    .c_ico1{
+        color:#fff;
+    }
+    .mod_focus {
+        position: relative;
+        overflow: hidden;
+    }
+    .focus__body {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+    }
+    .focus__info {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        margin: 0 15px 25px;
+    }
+    .focus__text {
+        -webkit-box-flex: 1;
+    }
+    .c_txt1 {
+        color: #fff;
+    }
+    .focus__tit {
+        position: relative;
+        height: 36px;
+        overflow: hidden;
+        font-size: 24px;
+        font-weight: 400;
+    }
+    .focus__desc, .focus__tit {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        text-align:left;
+    }
+    .focus__play {
+        position: relative;
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin-left: 10px;
+        border: solid 3px;
+        border-radius: 999px;
+        .focus__play_text{
+            opacity:0
+        }
+    }
+    .focus__play::before {
+        content: "";
+        position: absolute;
+        top: 13px;
+        left: 17px;
+        height: 0;
+        width: 0;
+        line-height: 999em;
+        overflow: hidden;
+        border-color: transparent transparent transparent currentColor;
+        border-width: 9px 15px;
+        border-style: solid;
+    }
+    .focus__bg {
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+    }
+    .focus__bg::after {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+    .c_gradient {
+        color: #000;
+    }
+    .focus__gradient {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        background-image: -webkit-linear-gradient(top,transparent,currentColor 80%);
+    }
+    .focus__gradient::after {
+        content: "";
+        display: block;
+        padding-top: 60%;
+    }
+    .c_bor1, .c_bor1::after {
+        border-color: rgba(255,255,255,.15);
+    }
+    .border_b, .border_l, .border_r, .border_t {
+        position: relative;
+    }
+    .song_list__box {
+        display: -webkit-box;
+        height: 60px;
+        padding-left: 10px;
+    }
+    .song_list__no {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        width: 30px;
+        margin-right: 10px;
+        font-size: 18px;
+    }
+    .c_txt2 {
+        color: rgba(255,255,255,.6);
+    }
+    .rank_trend {
+        display: -webkit-box;
+        -webkit-box-align: center;
+        height: 18px;
+        margin-top: -5px;
+    }
+    .rank_trend__icon {
+        display: block;
+        width: 7px;
+        line-height: 999px;
+        overflow: hidden;
+    }
+    .rank_trend__number {
+        display: block;
+        font-size: 12px;
+        -webkit-transform: scale(.7);
+    }
+    .song_list__body {
+        -webkit-box-flex: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        padding-right: 15px;
+        text-align:left;
+    }
+    .song_list__tit {
+        line-height: 22px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .song_list__desc {
+        /*display: -webkit-box;
+       -webkit-box-align: center;*/
+        font-size: 14px;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        overflow:hidden;
+    }
+    .mod_prompt {
+        padding-top: 40px;
+        text-align: center;
+    }
+    .mod_prompt__img {
+        display: block;
+        margin: 0 auto 20px;
+    }
+    .mod_prompt__tit {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .mod_complete {
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        height: 55px;
+        font-size: 14px;
+    }
 }

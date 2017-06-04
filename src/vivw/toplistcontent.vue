@@ -1,6 +1,9 @@
 <template>
   <ul class="mod_topic loaded">
-    <li class="topic_item" v-for='item,index in childToplist'>
+    <li class="topic_item"
+      v-for='item,index in childToplist'
+      @click = 'gotoINfo(item.id)'
+      >
         <div class="topic_main">
             <a href="javascript:;" class="topic_media">
                 <img :src="item.picUrl">
@@ -25,7 +28,12 @@ export default {
   props: ['childToplist'],
   data () {
     return {
-
+      list:{}
+    }
+  },
+  methods:{
+    gotoINfo(id){
+        this.$router.push({name:'Listinfo',params:{id:id}})
     }
   }
 }
