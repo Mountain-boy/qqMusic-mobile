@@ -8,7 +8,7 @@
                             <h1 class="focus__tit c_txt1">
                                 <div class="js_marquee" style="float: left; white-space: nowrap; text-overflow: ellipsis;">
                                     <span class="rank_name">{{lTopinfo.ListName}}</span>
-                                    <span id="toplist_name">???????</span>
+                                    <span id="toplist_name"></span>
                                     <span id="toplist_week"></span>
                                 </div>
                             </h1>
@@ -25,7 +25,7 @@
                 <li class="song_list__item js-song"
                     data-songid="202553248" data-songmid="004TEo4m1cwCtf" data-no="0"
                     v-for = 'item,index in list.songlist'
-                    @click = 'getMusicID(index)'
+                    @click = 'toPlayPage(item.data.songname)'
                     >
                     <a class="song_list__box" href="javascript:;">
                         <div class="song_list__no">
@@ -66,6 +66,14 @@
         getMusicID(index){
             console.log(index)
 
+        },
+        toPlayPage(songname){
+          console.log(songname)
+          this.$http.get('https://api.imjad.cn/cloudmusic/?type=search&limit=1&s='+songname).then((d)=>{
+            console.log(d.data.result.songs[0].id)
+            this.id = d.data.result.songs[0].id
+            this.$router.push({name:'playPage',params:{id:this.id}})
+          })
         }
       },
       mounted(){

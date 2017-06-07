@@ -7,8 +7,7 @@
         -webkit-appearance: textfield;" type="search" placeholder="搜索歌曲、歌单、专辑"
                     v-model = 'searchVal'
                     @focus ='inputClick'
-                    @keyup.13 ='searchData'
-                    @keyup.38 = 'ceshi'
+                    @keyup.prevent.13 ='searchData'
                 >
                 <span class="icon icon_search">搜索</span>
                 <span class="icon icon_delete"
